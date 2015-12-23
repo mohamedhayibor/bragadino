@@ -92,7 +92,8 @@ The style is really helpful when dealing with large projects (500 lines or more)
 #### 23- Your alchemist gigs got you a lot of money, so you decide to invest in a stock. Write a function to know how much your investment is worth with the given arguments:
 > - invested(number), the amount of money you initially invested in the given share
 > - changes(array of numbers), contains your shares daily movement percentages
-> - round your final value using .toFixed(2)
+
+***(round your final value using .toFixed(2))
 
 
 #### 24- Did you know that you could use the index of the array with map, reduce, reduceRight, every, filter, some ... Well, let's dive in an play with it. Write a function such as add(3,4,5); returns 26 => "( 3 * 1 ) + ( 4 * 2 ) + ( 5 * 3 )"
