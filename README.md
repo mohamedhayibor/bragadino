@@ -598,8 +598,8 @@ console.log(mumbling('Alchemist'));
 
 /* --- Deconstruction
 * After splitting up the characters into an array, we are returning
-* the proper amount of mumbles by concatenating the uppercased value and
-* the  *** Explain later *********
+* the proper amount of mumbles by concatenating the uppercased character (val) and
+* the appropritate number of lowercased characters depending on the current index
 * at every index. Then we are joining all the values in the array with a dash 
 * in between with .join('-')
 */
@@ -607,6 +607,7 @@ console.log(mumbling('Alchemist'));
 #### 29- Write a function that takes a string and returns the same string with the rules:
 > with all even indexed characters in each word upper cased
 > all odd indexed characters in each word lower cased. 
+
 ```Javascript
 function originalCase(string){
 	return string.split(' ').map(function (word) {
@@ -654,6 +655,7 @@ console.log(moveZeros([false,1,0,1,2,0,1,3,"a"])) // ===> [false,1,1,2,1,3,"a",0
 
 
 >Implement a function (same as algorithm) that determines whether a string is an isogram. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Assume the empty string is an isogram. Ignore letter case.
+
 ```Javascript
 /*
 +----------------------------------------+
@@ -702,6 +704,7 @@ console.log(isIsogram( "Mohamed" )) // ===> false
 
 #### 32- Have you ever wrote an encoder? let's create one. Write a duplicate encoder (function) that takes a word (string) then returns a string composing of "<" if the character is unique or ">" otherwise
 > exple: duplicateEncoder('programmer') ===> "<><<><>><>"
+
 ```Javascript
 function duplicateEncoder(word){
 	return word.toLowerCase().split('').reduce(function (sum, val, index, array) {
@@ -725,6 +728,7 @@ console.log(duplicateEncoder('bragadino')); // ===> "<<><><<<<"
 #### 33- given a string, replace every letter with its position in the alphabet.
 > Exple: a being 1, b being 2, etc. Ignore any character that is not a letter.
 > Inject a space between the numbers for legibility
+
 ```Javascript
 function alphabetPosition(string) {
 	return string.toLowerCase().split('').reduce(function(sum, val) {
@@ -748,6 +752,7 @@ console.log(alphabetPosition("The sunset sets at twelve o' clock."))
 
 #### 34- Write a global flatten method that takes any number of arguments and flattens them into a single array. Any nested arrays, no matter how deep should be flattened into the single array result.
 > Exple: flatten(3 , ['John', 7], [NaN, 9], [[4], ['c']]) ===> [ 3, 'John', 7, NaN, 9, 4, 'c' ]
+
 ```Javascript
 function flatten() {
 	return [].reduce.call(arguments, function(sum, val) {
