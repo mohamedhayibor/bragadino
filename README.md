@@ -4,7 +4,9 @@ On my programming journey, I have noticed an awesome coding style that I will ca
 
 Get ready for some serious alchemy here, we will be turning dust into gold.
 > Skim through the entire markdown. if you're up for the task, grab the exercise file and try solving as much as you possibly can. Only after some blood, sweat and tears, check the solutions that are pretty much solved with Bragadino's coding style.
-
+```
+To copy/clone: git clone https://github.com/mohamedhayibor/bragadino.git
+```
 
 To give you a flavor, this is a solution to a problem following the bragadino style.
 
