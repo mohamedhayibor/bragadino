@@ -116,4 +116,5 @@
 ### 34- Write a global flatten method that takes any number of arguments and flattens them into a single array. Any nested arrays, no matter how deep should be flattened into the single array result.
 > Exple: flatten(3 , ['John', 7], [NaN, 9], [[4], ['c']]) ===> [ 3, 'John', 7, NaN, 9, 4, 'c' ]
 
-
+#### 35- Write a unary function that takes an array of callback functions (of any length) and an argument such as
+> callbackChainer([a, b, c])(num) == callbackChainer(c(b(a(num)))
