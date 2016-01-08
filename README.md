@@ -772,6 +772,34 @@ console.log(flatten(null , ['bragadino', {a: 2}, 7, [['Mo'], ['c']] ], [NaN, 9])
 * 
 */
 ```
+#### 35- Write a unary function that takes an array of callback functions (of any length) and an argument such as
+> callbackChainer([a, b, c])(num) == callbackChainer(c(b(a(num)))
+
+
+```Javascript
+function callbackChainer(functions) {
+	return function (arg) {
+		return functions.reduce(function (sum, func) {
+			return func(sum)
+		}, arg);
+	}
+}
+
+var add = function (i) { return i + 2; };
+var mul = function (i) { return 2 * i; };
+var sub = function (i) { return i - 5; };
+
+console.log(callbackChainer([add, mul, sub])(8))
+// ==> 15
+
+
+/* --- Deconstruction
+* Couple of things going on here, but easy to follow:
+* First, we are passing the argument (arg) as the initial value for the reduce accumulator (sum in this case)
+* We are invoking sum with our passed functions in the array => func(sum) is getting executed and stored back 
+* to the accumulator sum.
+*/
+```
 
 ##### Obviously, the problems can be solved in multiple ways. I have tested the solutions I provided multiple times. Let me know if I have missed some edge cases.
 
